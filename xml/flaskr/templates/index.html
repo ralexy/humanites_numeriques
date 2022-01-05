@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procès de Nuremberg</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Procès de Nuremberg</h1>
+
+    <form method="post" autocomplete="off">
+        <!--<label for="propos">Veuillez entrer le terme à rechercher</label>-->
+        <input name="propos" id="propos" placeHolder="Terme à rechercher">
+        <input type="checkbox" id="exactTerm" name="exactTerm">
+        <label for="exactTerm">Propos exact</label>
+        <!--<label for="intervenant">Intervenant</label>-->
+        <input list="intervenant" id="monIntervenant" placeHolder="Nom de l'intervenant" name="monIntervenant"/>
+        <datalist name="intervenant" id="intervenant">
+            <option>SIR DAVID MAXWELL-FYFE </option>
+            <option>TÉMOIN VON SCHIRMEISTER </option>
+            <option>ACCUSÉ DÖNITZ </option>
+            <option>ACCUSÉ FRITZSCHE </option>
+            <option>ACCUSÉ FUNK </option>
+            <option>ACCUSÉ GÖRING </option>
+            <option>ACCUSÉ JODL </option>
+            <option>ACCUSÉ KALTENBRUNNER </option>
+            <option>ACCUSÉ KEITEL </option>
+            <option>ACCUSÉ RAEDER </option>
+            <option>ACCUSÉ ROSENBERG </option>
+            <option>ACCUSÉ SAUCKEL </option>
+            <option>ACCUSÉ SCHACHT </option>
+            <option>ACCUSÉ SEYSS-INQUART </option>
+            <option>ACCUSÉ VON NEURATH </option>
+            <option>ACCUSÉ VON PAPEN </option>
+            <option>ACCUSÉ VON RIBBENTROP </option>
+            <option>ACCUSÉ VON SCHIRACH </option>
+            <option>ACCUSÉ ERICH RAEDER </option>
+            <option>ACCUSÉ ERNST KALTENBRUNNER </option>
+            <option>ACCUSÉ FRANK </option>
+            <option>ACCUSÉ FRANZ VON PAPEN </option>
+            <option>ACCUSÉ HANS FRANK </option>
+            <option>ACCUSÉ HANS FRITZSCHE </option>
+            <option>ACCUSÉ HERMANN WILHELM GÖRING </option>
+            <option>ACCUSÉ HESS </option>
+            <option>ACCUSÉ JULIUS STREICHER </option>
+            <option>ACCUSÉ SPEER </option>
+            <option>ACCUSÉ STREICHER </option>
+            <option>ACCUSÉ WILHELM KEITEL </option>
+            <option>ALBERT SPEER </option>
+            <option>ALFRED JODL </option>
+            <option>ALFRED ROSENBERG </option>
+            <option>BALDUR VON SCHIRACH </option>
+            <option>BRIGADIER-GENERAL TELFORD TAYLOR </option>
+            <option>CAPITAINE DE FRÉGATE CALVACORESSI </option>
+            <option>CAPITAINE DREXEL A. SPRECHER </option>
+            <option>CAPITAINE HARRIS </option>
+            <option>CAPITAINE KUCHIN </option>
+            <option>CAPITAINE SAMUEL HARRIS </option>
+            <option>CAPITAINE SPRECHER </option>
+            <option>CAPITAINE V. V. KUCHIN </option>
+            <option>COLONEL AMEN </option>
+            <option>COLONEL CHARLES W. MAYS </option>
+            <option>COLONEL POKROVSKY </option>
+            <option>COLONEL PHILLIMORE </option>
+            <option>COLONEL JOHN HARLAN AMEN </option>
+            <option>COLONEL L. N. SMIRNOV </option>
+            <option>COLONEL LEON DOSTERT </option>
+            <option>COLONEL LEONARD WHEELER Jr. </option>
+            <option>COLONEL SMIRNOV </option>
+            <option>COLONEL ROBERT G. STOREY </option>
+            <option>COLONEL STOREY </option>
+            <option>COLONEL TAYLOR </option>
+            <option>COLONEL WHEELER </option>
+            <option>COLONEL Y. V. POKROVSKY </option>
+            <option>COMMANDANT BARRINGTON </option>
+            <option>COMMANDANT DONOVAN </option>
+            <option>COMMANDANT ELWYN JONES </option>
+            <option>COMMANDANT FARR </option>
+            <option>COMMANDANT FRANK B. WALLIS </option>
+            <option>COMMANDANT HARTLEY MURRAY </option>
+            <option>COMMANDANT J. HARCOURT BARRINGTON </option>
+            <option>COMMANDANT JAMES BRITT DONOVAN </option>
+            <option>COMMANDANT JONES </option>
+            <option>COMMANDANT MURRAY </option>
+            <option>COMMANDANT WALSH </option>
+            <option>COMMANDANT WARREN F. FARR </option>
+            <option>CONSEILLER D’ÉTAT A LA JUSTICE, GÉNÉRAL RAGINSKY  </option>
+            <option>CONSEILLER D’ÉTAT, GÉNÉRAL M. Y. RAGINSKY </option>
+            <option>CONSEILLER GENERAL A LA JUSTICE, COLONEL L. N. SMIRNOV </option>
+            <option>CONSEILLER SHENIN </option>
+            <option>CONSTANTIN VON NEURATH </option>
+            <option>Dr STEINBAUER </option>
+            <option>Docteur Pelckmann </option>
+            <option>Dr ALFRED BALACHOWSKY </option>
+            <option>Dr ALFRED SEIDL </option>
+            <option>Dr ALFRED THOMA </option>
+            <option>Dr BALACHOWSKY </option>
+            <option>Dr BALLAS </option>
+            <option>Dr BERGOLD </option>
+            <option>Dr BÖHM </option>
+            <option>Dr KARL HAENSEL </option>
+            <option>Dr DIX </option>
+            <option>Dr EGON KUBUSCHOK </option>
+            <option>Dr EXNER </option>
+            <option>Dr FLÄSCHNER </option>
+            <option>Dr FRIEDRICH BERGOLD </option>
+            <option>Dr FRITZ </option>
+            <option>Dr FRITZ SAUTER </option>
+            <option>Dr GAWLIK </option>
+            <option>Dr GUSTAV STEINBAUER </option>
+            <option>Dr GÜNTHER VON ROHRSCHEIDT </option>
+            <option>Dr HAENSEL </option>
+            <option>Dr HANNS MARX </option>
+            <option>Dr HANS FLÄCHSNER </option>
+            <option>Dr HANS GAWLIK </option>
+            <option>Dr HANS LATERNSER </option>
+            <option>Dr HEINZ FRITZ </option>
+            <option>Dr HORN </option>
+            <option>Dr JAHRREISS </option>
+            <option>Dr KAUFFMANN </option>
+            <option>Dr KEMPNER </option>
+            <option>Dr KLEFISCH </option>
+            <option>Dr KRANZBUEHLER </option>
+            <option>Dr KRAUS </option>
+            <option>Dr KUBUSCHOK </option>
+            <option>Dr KURT KAUFFMANN </option>
+            <option>Dr LATERNSER </option>
+            <option>Dr LOEFFLER </option>
+            <option>Dr LUDINGHAUSEN </option>
+            <option>Dr MARX </option>
+            <option>Dr MARTIN HORN </option>
+            <option>Dr MARTIN LOEFFLER </option>
+            <option>Dr MERKEL </option>
+            <option>Dr NELTE </option>
+            <option>Dr OTTO FREIHERR VON LÜDINGHAUSEN </option>
+            <option>Dr OTTO NELTE </option>
+            <option>Dr PANNENBECKER </option>
+            <option>Dr OTTO STAHMER </option>
+            <option>Dr VON LÜDINGHAUSEN </option>
+            <option>M. PELCKMANN </option>
+            <option>Dr ROBERT KEMPNER </option>
+            <option>Dr ROBERT M. W. KEMPNER </option>
+            <option>Dr ROBERT SERVATIUS </option>
+            <option>Dr RUDOLF DIX </option>
+            <option>Dr RUDOLF MERKEL </option>
+            <option>Dr SAUCKEL </option>
+            <option>Dr SAUTER </option>
+            <option>Dr SCHILF </option>
+            <option>Dr SEIDL </option>
+            <option>Dr SERVATIUS </option>
+            <option>Dr SIEMERS </option>
+            <option>Dr STAHMER </option>
+            <option>Dr THEODOR KLEFISCH </option>
+            <option>Dr THOMA </option>
+            <option>Dr VON ROHRSCHEIDT </option>
+            <option>Dr WALTER BALLAS </option>
+            <option>Dr WALTER SIEMERS </option>
+            <option>ERICH RAEDER </option>
+            <option>FLOTTENRICHTER KRANZBÜHLER </option>
+            <option>FRANZ VON PAPEN </option>
+            <option>FRITZ SAUCKEL </option>
+            <option>GENERAL N. D. ZORYA </option>
+            <option>GÉNÉRAL NIKITCHENKO </option>
+            <option>GÉNÉRAL RAGINSKY </option>
+            <option>GÉNÉRAL RUDENKO </option>
+            <option>GÉNÉRAL TAYLOR </option>
+            <option>GÉNÉRAL ZORYA </option>
+            <option>GÉNÉRAL </option>
+            <option>GÉNÉRAL ALEXANDROV </option>
+            <option>GÉNÉRAL G. A. ALEXANDROV </option>
+            <option>GÉNÉRAL I. T. NIKITCHENKO </option>
+            <option>GÉNÉRAL M. Y. RAGINSKY </option>
+            <option>GÉNÉRAL POKROVSKY </option>
+            <option>GÉNÉRAL R. A. RUDENKO </option>
+            <option>GÉNÉRAL TELFORD TAYLOR </option>
+            <option>GÖRING </option>
+            <option>HANS FRANK </option>
+            <option>HANS FRITZSCHE </option>
+            <option>HESS </option>
+            <option>HJALMAR SCHACHT </option>
+            <option>JOACHIM VON RIBBENTROP </option>
+            <option>JULIUS STREICHER </option>
+            <option>M. JUSTICE JACKSON </option>
+            <option>KARL DÖNITZ </option>
+            <option>LE PRÉSIDENT </option>
+            <option>LE PROCUREUR AMÉRICAIN </option>
+            <option>LE PROCUREUR BRITANNIQUE </option>
+            <option>LE SECRÉTAIRE </option>
+            <option>LE TEMOIN </option>
+            <option>LE TRIBUNAL  </option>
+            <option>LIEUTENANT-COLONEL GRIFFITH-JONES </option>
+            <option>LIEUTENANT ATHERTON </option>
+            <option>LIEUTENANT BRYSON </option>
+            <option>LIEUTENANT-COMMANDER HARRIS </option>
+            <option>LIEUTENANT HENRY K. ATHERTON </option>
+            <option>LIEUTENANT J. G. BERNARD D. MELTZER </option>
+            <option>LIEUTENANT LAMBERT </option>
+            <option>LIEUTENANT MELTZER </option>
+            <option>LIEUTENANT THOMAS F. LAMBERT JR. </option>
+            <option>LIEUTENANT-COLONEL A. F. VOLCHKOV </option>
+            <option>LIEUTENANT-COLONEL BALDWIN </option>
+            <option>LIEUTENANT-COLONEL BROOKHART </option>
+            <option>LIEUTENANT-COLONEL J. M. G. GRIFFITH-JONES </option>
+            <option>LIEUTENANT-COLONEL OZOL </option>
+            <option>LIEUTENANT-COLONEL SMITH W. BROOKHART Jr </option>
+            <option>LIEUTENANT-COLONEL WILLIAM H. BALDWIN </option>
+            <option>LIEUTENANT-COMMANDER WHITNEY R. HARRIS </option>
+            <option>LT-COMMANDER HARRIS </option>
+            <option>L’HUISSIER AUDIENCIER </option>
+            <option>L’INTERPRÈTE </option>
+            <option>L’INTERPRÈTE LUDOMIR VALEFF </option>
+            <option>L’INTERPRÈTE RUSSE-ANGLAIS </option>
+            <option>L’OFFICIER ATTACHÉ AU TRIBUNAL </option>
+            <option>M. BÖHM </option>
+            <option>M. G. D. ROBERTS </option>
+            <option>M. ROBERTS </option>
+            <option>M. BOEHM </option>
+            <option>M. DUBOST </option>
+            <option>M. HERZOG </option>
+            <option>M. ALBRECHT </option>
+            <option>M. ALDERMAN </option>
+            <option>M. AUGUSTE CHAMPETIER DE RIBES </option>
+            <option>M. BABEL </option>
+            <option>M. BIDDLE </option>
+            <option>M. BIRKETT </option>
+            <option>M. BOIX </option>
+            <option>M. BRUDNO </option>
+            <option>M. BÛHM </option>
+            <option>M. CAPPELEN </option>
+            <option>M. CHAMPETIER DE RIBES </option>
+            <option>M. CHARLES BURDELL </option>
+            <option>M. CHARLES DUBOST </option>
+            <option>M. CHARLES GERTHOFFER </option>
+            <option>M. CONSTANT QUATRE </option>
+            <option>M. DE MENTHON </option>
+            <option>M. DEBENEST </option>
+            <option>M. DELPECH </option>
+            <option>M. DELPHIN DEBENEST </option>
+            <option>M. DODD </option>
+            <option>M. DONNEDIEU DE VABRES </option>
+            <option>M. EDGAR FAURE </option>
+            <option>M. EMIL REUTER </option>
+            <option>M. FAURE </option>
+            <option>M. FRANCIS BIDDLE </option>
+            <option>M. FRANÇOIS BOIX </option>
+            <option>M. FRANÇOIS DE MENTHON </option>
+            <option>M. FUSTER </option>
+            <option>M. GEORG BOEHM </option>
+            <option>M. GERTHOFFER </option>
+            <option>M. HANS CAPPELEN </option>
+            <option>M. HENRI MONNERAY </option>
+            <option>M. HENRY DELPECH </option>
+            <option>M. HORST PELCKMANN </option>
+            <option>M. JACOBUS VORRINK </option>
+            <option>M. JACQUES B. HERZOG </option>
+            <option>M. JACQUES-BERNARD HERZOG </option>
+            <option>M. JEAN-FRÉDÉRIC VEITH </option>
+            <option>M. JEAN-JACQUES LANOIRE </option>
+            <option>M. JOHN J. PARKER </option>
+            <option>M. JUSTICE ROBERT H. JACKSON </option>
+            <option>M. JUSTICE-JACKSON </option>
+            <option>M. LAMPE </option>
+            <option>M. LANOIRE </option>
+            <option>M. LE CONSEILLER ROBERT FALCO  </option>
+            <option>M. LE PROFESSEUR DONNEDIEU DE VABRES </option>
+            <option>M. LUDWIG BABEL </option>
+            <option>M. MAURICE LAMPE </option>
+            <option>M. MONNERAY </option>
+            <option>M. MOUNIER </option>
+            <option>M. PAUL ROSER </option>
+            <option>M. PIERRE MOUNIER </option>
+            <option>M. QUATRE </option>
+            <option>M. RALPH G. ALBRECHT </option>
+            <option>M. REUTER </option>
+            <option>M. ROSER </option>
+            <option>M. SERGE FUSTER </option>
+            <option>M. SIDNEY S. ALDERMAN </option>
+            <option>M. THOMAS J. DODD </option>
+            <option>M. VAN DER ESSEN </option>
+            <option>M. VEITH </option>
+            <option>M. VORRINK </option>
+            <option>M. WALTER W. BRUDNO </option>
+            <option>M. WILLEY </option>
+            <option>MADAME VAILLANT-COUTURIER </option>
+            <option>PROFESSEUR Dr JAHRREISS </option>
+            <option>PROFESSEUR Dr EXNER </option>
+            <option>PROFESSEUR Dr FRANZ EXNER </option>
+            <option>PROFESSEUR Dr HERBERT KRAUS </option>
+            <option>PROFESSEUR Dr HERMANN JAHRREISS </option>
+            <option>PROFESSEUR Dr KRAUS </option>
+            <option>RUDOLF HESS </option>
+            <option>SIR HARTLEY SHAWCROSS </option>
+            <option>TÉMOIN BEST </option>
+            <option>TÉMOIN BÜHLER </option>
+            <option>TÉMOIN BUSCHENHAGEN </option>
+            <option>TÉMOIN BÜCHS </option>
+            <option>TÉMOIN DAHLERUS </option>
+            <option>TÉMOIN DIECKHOFF </option>
+            <option>TÉMOIN GRUSS </option>
+            <option>TÉMOIN WIMMER </option>
+            <option>TÉMOIN HIRSCHFELD </option>
+            <option>TÉMOIN HIRTH </option>
+            <option>TÉMOIN HOEPPNER </option>
+            <option>TÉMOIN HOFFMANN </option>
+            <option>TÉMOIN HUPFAUER </option>
+            <option>TÉMOIN JÜTTNER </option>
+            <option>TÉMOIN KEMPKA </option>
+            <option>TÉMOIN KESSELRING </option>
+            <option>TÉMOIN KIVELISHA </option>
+            <option>TÉMOIN KÖRNER </option>
+            <option>TÉMOIN LAMMERS </option>
+            <option>TÉMOIN LOMAKIN </option>
+            <option>TÉMOIN MARKOV </option>
+            <option>TÉMOIN MORGEN </option>
+            <option>TÉMOIN OHLENDORF </option>
+            <option>TÉMOIN PAULUS </option>
+            <option>TÉMOIN RAJZMAN </option>
+            <option>TÉMOIN REINECKE </option>
+            <option>TÉMOIN SCHELLENBERG </option>
+            <option>TÉMOIN SCHMIDT </option>
+            <option>TÉMOIN SCHÄFER </option>
+            <option>TÉMOIN STRÖLIN </option>
+            <option>TÉMOIN VON BRAUCHITSCH </option>
+            <option>TÉMOIN VON DEM BACH ZELEWSKI </option>
+            <option>TÉMOIN VON MANSTEIN </option>
+            <option>TÉMOIN VON RUNDSTEDT </option>
+            <option>TEMOIN VON STEENGRACHT </option>
+            <option>TÉMOIN WISLICENY </option>
+            <option>TÉMOIN ABRAHAM GERZEVITCH SUZKEVER </option>
+            <option>TÉMOIN ADOLF FREIHERR STEENGRACHT VON MOY-LAND </option>
+            <option>TÉMOIN ADOLF WESTHOFF </option>
+            <option>TÉMOIN ADÈLE STREICHER </option>
+            <option>TÉMOIN AHRENS </option>
+            <option>TÉMOIN ALBERT KESSELRING </option>
+            <option>TÉMOIN ALBERT THOMS </option>
+            <option>TÉMOIN ALOÏS HÖLLRIEGL </option>
+            <option>TÉMOIN AUGUST WINTER </option>
+            <option>TÉMOIN BAZILEVSKY </option>
+            <option>TÉMOIN BERND VON BRAUCHITSCH </option>
+            <option>TÉMOIN BILFINGER </option>
+            <option>TÉMOIN BIRGER DAHLERUS </option>
+            <option>TÉMOIN BLAHA </option>
+            <option>TÉMOIN VOCKE </option>
+            <option>TÉMOIN BODENSCHATZ </option>
+            <option>TÉMOIN BORIS BAZILEVSKY </option>
+            <option>TÉMOIN BRILL </option>
+            <option>TÉMOIN Dr HANS HEINRICH LAMMERS </option>
+            <option>TÉMOIN Dr PAUL OTTO SCHMIDT </option>
+            <option>TÉMOIN EBERHARD GODT </option>
+            <option>TÉMOIN GLAISE-HORSTENAU </option>
+            <option>TÉMOIN EISENBERG </option>
+            <option>TÉMOIN EMIL JOHANN RUDOLF PUHL </option>
+            <option>TÉMOIN ERHARD MILCH </option>
+            <option>TÉMOIN ERICH KEMPKA </option>
+            <option>TÉMOIN SCHULTE-MÖNTING </option>
+            <option>TÉMOIN ERICH VON MANSTEIN </option>
+            <option>TÉMOIN ERNST AUGUST SCHWEBEL </option>
+            <option>TÉMOIN ERNST HIEMER </option>
+            <option>TÉMOIN VON WEIZSÄCKER </option>
+            <option>TÉMOIN ERNST WILHELM BOHLE </option>
+            <option>TÉMOIN ERWIN LAHOUSEN </option>
+            <option>TÉMOIN EUGEN OBERHÄUSER </option>
+            <option>TÉMOIN FRANZ BOCK </option>
+            <option>TÉMOIN FRANZ HAYLER </option>
+            <option>TÉMOIN SCHLEGELBERGER </option>
+            <option>TÉMOIN FRIEDRICH AHRENS </option>
+            <option>TÉMOIN FRIEDRICH KARL VON EBBRSTEIN </option>
+            <option>TÉMOIN FRIEDRICH STROBEL </option>
+            <option>TÉMOIN FRITZ HERRWERTH </option>
+            <option>TÉMOIN FRITZ WIESHOFER </option>
+            <option>TÉMOIN FUNK </option>
+            <option>TÉMOIN GEORG KONRAD MORGEN </option>
+            <option>TÉMOIN GERHARD KÔPKE </option>
+            <option>TÉMOIN GERT VON RUNDSTEDT </option>
+            <option>TÉMOIN GISEVIUS </option>
+            <option>TÉMOIN GODT </option>
+            <option>TÉMOIN GRIGORIEV </option>
+            <option>TÉMOIN GUIDO SCHMIDT </option>
+            <option>TÉMOIN GUSTAV DIETRICH HÖPKEN </option>
+            <option>TÉMOIN GÜNTHER HESSLER </option>
+            <option>TÉMOIN GÜNTHER REINECKE </option>
+            <option>TÉMOIN HANS BERND GISEVIUS </option>
+            <option>TÉMOIN HANS HEINRICH DIECKHOFF </option>
+            <option>TÉMOIN HANS HERMANN VOLCKERS </option>
+            <option>TÉMOIN HANS JOACHIM RIECKE </option>
+            <option>TÉMOIN HANS KROLL </option>
+            <option>TÉMOIN HANS RÖSSNER </option>
+            <option>TÉMOIN WEGSCHEIDER </option>
+            <option>TÉMOIN HARTMANN LAUTERBACHER </option>
+            <option>TÉMOIN WAGNER </option>
+            <option>TÉMOIN HEINZ MAX HIRSCHFELD </option>
+            <option>TÉMOIN HEISIG </option>
+            <option>TÉMOIN HERBERT BÜCHS </option>
+            <option>TÉMOIN HERRWERTH </option>
+            <option>TÉMOIN HILDEBRANDT </option>
+            <option>TÉMOIN VON BUTTLAR-BRANDENFELS </option>
+            <option>TÉMOIN HUBERT HILDEBRANDT </option>
+            <option>TÉMOIN HÖPKEN </option>
+            <option>TÉMOIN HÖSS </option>
+            <option>TÉMOIN IAKOV GRIGORIEV </option>
+            <option>TÉMOIN ISRAËL EISENBERG </option>
+            <option>TÉMOIN JOSEPH ABGAROVITCH ORBELI </option>
+            <option>TÉMOIN JOSEPH BÜHLER </option>
+            <option>TÉMOIN JÄGER </option>
+            <option>TÉMOIN KARL BODENSCHATZ </option>
+            <option>TÉMOIN KARL HEINZ HOFFMANN </option>
+            <option>TÉMOIN KAUFMANN </option>
+            <option>TÉMOIN SEVERING </option>
+            <option>TÉMOIN VON BURGSDORFF </option>
+            <option>TÉMOIN LAHOUSEN </option>
+            <option>TÉMOIN LAUTERBACHER </option>
+            <option>TÉMOIN MARGARETE BLANK </option>
+            <option>TÉMOIN MARKO ANTONOV MARKOV </option>
+            <option>TÉMOIN MAX JUTTNER </option>
+            <option>TÉMOIN MAX TIMM </option>
+            <option>TÉMOIN WIELEN </option>
+            <option>TÉMOIN MEYER-WENDEBORN </option>
+            <option>TÉMOIN MICHAËL SKUBL </option>
+            <option>TÉMOIN MILCH </option>
+            <option>TÉMOIN MORITZ VON SCHIRMEISTER </option>
+            <option>TÉMOIN NEUBACHER </option>
+            <option>TÉMOIN NIKOLAÏ IVANOVITCH LOMAKIN </option>
+            <option>TÉMOIN OBERHÄUSER </option>
+            <option>TÉMOIN ORBELI </option>
+            <option>TÉMOIN PAUL HAUSER </option>
+            <option>TÉMOIN PERCY ERNST SCHRAMM </option>
+            <option>TÉMOIN PETER JOSEF HEISIG </option>
+            <option>TÉMOIN PHILIPP WURZBACHER </option>
+            <option>TÉMOIN PUHL </option>
+            <option>TÉMOIN REINHARD VON EICHBORN </option>
+            <option>TÉMOIN ROLF HEINZ HOEPPNER </option>
+            <option>TÉMOIN RUDOLF BILFINGER </option>
+            <option>TÉMOIN RUDOLF HÖSS </option>
+            <option>TÉMOIN RÖSSNER </option>
+            <option>TÉMOIN SAMUEL RAJZMAN </option>
+            <option>TÉMOIN SCHRAMM </option>
+            <option>TÉMOIN SCHREIBER </option>
+            <option>TÉMOIN SHMAGLEVSKAJA </option>
+            <option>TÉMOIN SIEVERS </option>
+            <option>TÉMOIN SKUBL </option>
+            <option>TÉMOIN STOTHFANG </option>
+            <option>TÉMOIN STROBEL </option>
+            <option>TÉMOIN SUZKEVER </option>
+            <option>TÉMOIN THEO HUPFAUER </option>
+            <option>TÉMOIN THEODOR GRUSS </option>
+            <option>TÉMOIN TIMM </option>
+            <option>TÉMOIN VON EICHBORN </option>
+            <option>TÉMOIN VÖLCKERS </option>
+            <option>TÉMOIN WALTER SCHREIBER </option>
+            <option>TÉMOIN WALTER STOTHFANG </option>
+            <option>TÉMOIN WERNER AUGUST MAX SCHÄFER </option>
+            <option>TÉMOIN WERNER BEST </option>
+            <option>TÉMOIN WESTHOFF </option>
+            <option>TÉMOIN WIESHOFER </option>
+            <option>TÉMOIN WILHELM JÄGER </option>
+            <option>TÉMOIN WILLI MEYER-WENDEBORN </option>
+            <option>TÉMOIN WOLFRAM SIEVERS </option>
+            <option>TÉMOIN WËGSCHÉIDËR </option>
+            <option>WALTER FUNK </option>
+            <option>WILHELM FRICK </option>
+            <option>WILHELM KEITEL </option>
+            <option>• TÉMOIN WIMMER </option>
+        </datalist> 
+        <input type="checkbox" id="exactIntervenant" name="exactIntervenant">
+        <label for="exactIntervenant">Intervenant exact</label>
+        <label for="startDate">Date de début :</label>
+        <input type="date" id="startDate" name="startDate" min="1945-11-14" max="1946-10-01">
+
+        <label for="startDate">Date de fin :</label>
+        <input type="date" id="endDate" name="endDate" min="1945-11-14" max="1946-10-01">
+        <input type="submit" value="Rechercher">
+    </form>
+
+    <p>{{intervenant}}</p>
+    {% if length>0 %}
+        <p>{{length}} résultat(s) trouvé(s)</p>
+    {% endif %}
+    {% for i in range(1, length) %}
+            <div>  
+                <h2>{{msg[i][1][1]}}</h2>
+                <h3>{{msg[i][2][1]}}</h3>
+                <h3>{{msg[i][3][1]}}</h3>
+                <p>{{msg[i][4][1]}}</p>
+            </div>
+            <br><br>
+    {% endfor %}
+    
+</body>
+</html>

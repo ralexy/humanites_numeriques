@@ -1,0 +1,70 @@
+/*
+Je roulais sur la partie droite de la chaussée quand un véhicule arrivant en face dans le virage a été complètement déporté.
+Serrant à droite au maximum, je n'ai pu éviter la voiture qui arrivait à grande vitesse.
+
+PV1 : Je roulais sur la partie droite de la chaussée
+PV3 : quand un véhicule [PV2: arrivant en face dans le virage] a été complètement déporté.
+PV4 : Serrant à droite au maximum,
+PV5 : je n'ai pu éviter la voiture
+PV6 : qui arrivait à grande vitesse.
+*/
+
+axe pv1,pv2,pv3,pv4,pv5,pv6
+
+// Création des intervalles :
+intervalleP roulerP,arriverP,déporterP,serrerP,pouvoirP,arriver2P
+intervalleR roulerR,arriverR,déporterR1,déporterR2,déporterR3,serrerR,pouvoirR1,pouvoirR2,arriver2R
+intervalleE roulerE,arriverE,déporterE,serrerE,pouvoirE,arriver2E
+
+// attribution des axes :
+roulerP, roulerR, roulerE sur pv1
+arriverP, arriverR, arriverE sur pv2
+déporterP, déporterR1,déporterR2,déporterR3, déporterE sur pv3
+serrerP, serrerR, serrerE sur pv4
+pouvoirP, pouvoirR1,pouvoirR2, pouvoirE sur pv5
+arriver2P, arriver2R, arriver2E sur pv6
+
+
+// un même texte pour tous les procès, donc un même intervalle d'énonciation :
+roulerE coin arriverE
+roulerE coin déporterE
+roulerE coin serrerE
+roulerE coin pouvoirE
+roulerE coin arriver2E
+
+// I. Application des règles portant sur les temps conjugués :
+
+//axe1 (imparfait)
+roulerP re roulerR
+roulerR prec roulerE
+
+//axe2 (participe présent)
+arriverP re arriverR
+
+//axe3 (passé composé) déporterR1 correspond au participe passé "déporté", déporterR2 correspond au participe passé "été" et déporterR3 correspond à l'auxiliaire
+déporterP coin déporterR1
+déporterP coin déporterR2
+déporterR3 coin déporterE
+déporterR3 succ déporterR2
+
+//axe4 (participe présent)
+serrerP re serrerR
+
+//axe5 (passé composé) pouvoir R1 fait référence au participe passé et pouvoir R2 à l'auxiliaire
+pouvoirP coin pouvoirR1
+pouvoirR2 coin pouvoirE
+pouvoirR2 succ pouvoirR1
+
+//axe6 (imparfait)
+arriver2P re arriver2R
+arriver2R prec arriver2E
+
+// II. Relations inter-procès
+
+// gestion des subordinations :
+serrerR coin pouvoirR1 //participe présent (subordonnée participiale)
+roulerR coin déporterR1 //subordonnée adverbiale introduite par "quand"
+
+// règle de saillance (par défaut) :
+roulerR coin arriverR
+arriver2R coin pouvoirR1
